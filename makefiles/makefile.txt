@@ -1,0 +1,17 @@
+
+all:	hardware image-main
+hardware:	hardware.o
+	g++ -o hardware hardware.o
+hardware.o:	hardware.cpp hardware.h
+	g++ -c hardware.cpp
+image-main:	image-main.o
+	g++ -o hardware hardware.o
+image-main.o: image.cpp image.h
+	$(CC) -c image.cpp
+image:	image.o
+	g++ -o image image.o
+image.o:	image.cpp image.h
+	g++ -c image.cpp
+
+clean:	
+	

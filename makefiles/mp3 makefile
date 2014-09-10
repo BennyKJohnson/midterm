@@ -1,0 +1,16 @@
+all: mp3 stocks
+
+mp3: mp3.o
+	g++ -o mp3 mp3.o
+
+mp3.o: mp3.cpp
+	g++ -c mp3 mp3.cpp
+
+stocks: stocks.o
+	g++ -o stocks stocks.o
+
+stocks.o: stocks.cpp
+	g++ -c stocks stocks.cpp
+
+clean:
+	rm -rf *o
